@@ -1,0 +1,4 @@
+interface:
+  display_name: "Farcell"
+  short_description: "Converteix documents en coneixement connectat"
+  default_prompt: "Utilitza $farcell per crear o actualitzar una volta amb les fonts que t’indico."
