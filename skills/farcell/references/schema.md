@@ -62,7 +62,11 @@ les afirmacions del mapa; si només és navegació, pot quedar buit. L'índex
 general continua sent un catàleg breu. Les notes temàtiques poden tenir
 àlies a `aliases` per unificar denominacions sense fusionar homònims.
 
-## Eina d'estat (Python 3, biblioteca estàndard)
+## Eina d'estat opcional (Python 3.10+, biblioteca estàndard)
+
+Aquests comandaments només s'utilitzen en mode amb Python. En mode manual
+aplica [el procediment alternatiu](tooling.md); `source_sha256` queda a `null`.
+El comprovador requereix `fcntl` (Linux/macOS).
 
 Des de la carpeta de la skill:
 

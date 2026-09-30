@@ -17,3 +17,7 @@ Les notes generades són esborranys fins que l'usuari les revisa.
 Usa wikilinks amb camí des de l'arrel de la volta, sense `.md` per notes i amb
 extensió per altres fitxers. Mantén un índex i mapes només quan aportin valor.
 Verifica originals abans de respondre amb cites, xifres o conclusions centrals.
+
+Llegeix `tooling` a `knowledge.yaml` i respecta el mode triat. Python és
+opcional; sense Python, aplica la revisió manual i documenta les lectures
+al registre segons `references/tooling.md` de la skill.

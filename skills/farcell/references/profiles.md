@@ -16,6 +16,7 @@ source_policy: "provided-only"
 input_folder: "raw"
 personal_folder: "notes-personals"
 batch_size: 5
+tooling: "auto" # manual per treballar sense Python
 categories: [conceptes, procediments, entitats, sintesis, preguntes]
 ```
 

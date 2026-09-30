@@ -5,9 +5,9 @@ description: Crear, ampliar, consultar i mantenir una volta Obsidian de coneixem
 
 # Farcell
 
-Els exemples del projecte són ficticis i opcionals. No els incorporis a una
-volta real ni els tractis com a context del corpus. Només llegeix-los si
-l'usuari demana una demostració o un exemple de format.
+Els exemples del projecte són opcionals i estan identificats com a demostració.
+No els incorporis a una volta real ni els utilitzis com a corpus de l'usuari.
+Només llegeix-los si es demana una demostració o un exemple de format.
 
 Transforma un corpus en una volta navegable que expliqui què se sap, d'on
 prové i com es relaciona. Serveix per a aprenentatge, projectes, organitzacions,
@@ -48,10 +48,17 @@ Crea les categories temàtiques només quan hi hagi contingut. Adapta
 [el contracte](references/vault-contract.md) a l'AGENTS.md de la volta; integra'l
 amb instruccions existents. Obsidian pot obrir aquesta carpeta com a volta.
 
+## Eines opcionals
+
+Abans d'incorporar o mantenir fonts, llegeix [els modes de treball](references/tooling.md).
+Python és opcional. Respecta `tooling` a `knowledge.yaml` i la petició de
+l'usuari; en mode manual substitueix `scan`, `links` i `accept` pel procediment
+de lectura, revisió d'enllaços i registre descrit allà.
+
 ## Incorporar i connectar
 
 Llegeix [el procediment d'ingestió](references/ingest.md) i
-[l'esquema de notes i estat](references/schema.md). Abans d'escriure, executa
+[l'esquema de notes i estat](references/schema.md). En mode amb Python, abans d'escriure executa
 `python3 scripts/vault_state.py scan /ruta/volta` des de la carpeta de la skill.
 El comprovador assumeix l'estructura mínima anterior; si la volta utilitza
 altres camins, adapta l'eina o fes les comprovacions equivalents sense
@@ -92,7 +99,7 @@ Una nota òrfena pot ser legítima: no inventis relacions per connectar-la.
 No eliminis notes perquè desapareguin originals. Conserva edicions humanes
 i proposa canvis separats quan hi hagi conflicte.
 
-Comprova destins amb `python3 scripts/vault_state.py links /ruta/volta` i revisa
+En mode amb Python, comprova destins amb `python3 scripts/vault_state.py links /ruta/volta` i revisa
 manualment fidelitat, localitzadors, metadades i utilitat de les relacions.
 Informa de fonts processades i pendents, notes creades/actualitzades, conflictes
 i resultats de verificació. Un lint tècnic no verifica el coneixement.
