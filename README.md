@@ -15,6 +15,19 @@ preguntes deixen obertes.
 
 [Repositori Farcell](https://github.com/daniel-alomar/farcell).
 
+## Com està plantejat
+
+Farcell conté una skill que utilitza l'agent d'IA amb què treballes.
+En l'ús habitual, un únic agent llegeix les fonts, crea notes, les connecta
+i revisa el resultat seguint passos. No cal executar dos agents.
+
+- `agents/` conté guies de rols opcionals: coordinador i revisor.
+- `skills/farcell/agents/openai.yaml` conté metadades de presentació per a Codex;
+  no és un altre agent.
+- `AGENTS.md` conté instruccions contextuals per treballar al projecte.
+
+[Funcionament, operacions i procés pas a pas](docs/ca/funcionament.md).
+
 ## Començar
 
 Copia `skills/farcell/` al directori de skills del teu agent, o demana-li que
@@ -95,7 +108,8 @@ com obrir el graf, interpretar la llegenda i canviar-la o retirar-la.
 ## Carpetes
 
 - `skills/farcell/`: instruccions, referències i comprovador opcional.
-- `agents/`: rols opcionals de coordinació i revisió; no s'activen sols.
+- `agents/`: guies de rols opcionals, no agents executables.
+- `docs/ca/`: explicació del funcionament i preparació de la documentació bilingüe.
 - `context/`: objectiu i decisions del producte.
 - `memory/`: resums locals opcionals, exclosos de la distribució.
 - `examples/`: demostració eliminable.
@@ -142,6 +156,14 @@ fitxers distribuïbles a `dist/`. El tercer prepara una versió sense exemples;
 `skills/farcell/` directament i compartir els fitxers seleccionats sense generar
 el paquet automàtic. Memòria local, voltes personals, converses i secrets
 queden fora de la distribució automàtica. La llicència continua pendent de decisió.
+
+## Idiomes de la documentació
+
+La documentació actual és en català. Per a la versió pública, es proposa
+mantenir guies completes en català i anglès amb enllaços entre versions,
+conservant una sola implementació de la skill.
+[Organització i manteniment de les traduccions](docs/ca/idiomes.md).
+La traducció anglesa completa queda pendent de preparar.
 
 ## Projecte relacionat
 
