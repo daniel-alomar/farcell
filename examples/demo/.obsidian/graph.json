@@ -1,0 +1,45 @@
+{
+  "search": "path:wiki/",
+  "showTags": false,
+  "showAttachments": false,
+  "hideUnresolved": true,
+  "showOrphans": true,
+  "collapse-color-groups": false,
+  "colorGroups": [
+    {
+      "query": "tag:materia/matematiques",
+      "color": {
+        "a": 1,
+        "rgb": 29362
+      }
+    },
+    {
+      "query": "tag:materia/fisica",
+      "color": {
+        "a": 1,
+        "rgb": 40563
+      }
+    },
+    {
+      "query": "tag:materia/literatura",
+      "color": {
+        "a": 1,
+        "rgb": 15113984
+      }
+    },
+    {
+      "query": "tag:connexio-entre-materies",
+      "color": {
+        "a": 1,
+        "rgb": 13400487
+      }
+    },
+    {
+      "query": "tag:navegacio",
+      "color": {
+        "a": 1,
+        "rgb": 10066329
+      }
+    }
+  ]
+}

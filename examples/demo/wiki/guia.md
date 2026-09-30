@@ -45,13 +45,13 @@ Un mapa és navegació editorial; estar connectat a l'índex no prova una relaci
 conceptual. Les línies del graf tampoc indiquen per si mateixes si la relació
 és una aplicació, una contradicció o una referència. Cal llegir la nota.
 
-## Graf amb colors
+## Recomanació opcional: graf amb colors
 
 Al graf d'Obsidian, obre la configuració, entra a **Groups / Grups**, crea
 un grup amb una consulta i tria el color del cercle. És una funció integrada.
 Pots filtrar per `path:wiki/` per centrar-te en les notes. Les regles següents
-són una proposta visual; les etiquetes ja són als fitxers, però els colors
-els configures a Obsidian.
+són una proposta visual. La demostració ja inclou aquests grups i colors
+a `.obsidian/graph.json`; les etiquetes són als fitxers.
 
 | Consulta del grup | Color suggerit | Significat |
 |---|---|---|
@@ -64,4 +64,19 @@ els configures a Obsidian.
 Obre també el graf local d'una nota per veure les connexions pròximes.
 Els colors distingeixen grups; no certifiquen coneixement ni revisió.
 [Documentació oficial del graf](https://obsidian.md/help/plugins/graph).
-No cal instal·lar plugins ni s'inclou configuració personal d'Obsidian al paquet.
+No cal instal·lar plugins. El paquet inclou només el perfil de graf creat
+per a aquesta demostració, sense historial de finestres ni configuració personal.
+
+### Veure els colors de la demostració
+
+Obre la carpeta completa `examples/demo/` com a volta i després la vista de
+graf global. No n'hi ha prou amb copiar només `wiki/`: la carpeta oculta
+`.obsidian/` conté el perfil. Si ja tenies aquesta volta oberta quan s'ha
+afegit el fitxer, tanca-la i torna-la a obrir. La demostració filtra el graf
+per les notes de `wiki/`; pots canviar aquest filtre.
+
+Els colors són opcionals i es poden modificar a Grups o restablir des de la
+configuració del graf. No copiïs el perfil sobre les preferències d'una volta
+personal sense revisar-lo. El graf local pot tenir opcions pròpies.
+El format del perfil s'ha comprovat com a JSON; la visualització no s'ha
+validat en una sessió gràfica d'Obsidian en aquesta revisió.
