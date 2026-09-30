@@ -25,9 +25,9 @@ síntesi les fa l'agent. Obsidian permet navegar i editar el resultat.
 Exemple de petició (substitueix les rutes per les teves):
 
 > Utilitza $farcell. Organitza els apunts de `/ruta/apunts` en una volta a
-> `/ruta/volta-matematiques`, en català. Conserva els originals, relaciona
-> els conceptes i prepara una ruta d’estudi amb exemples resolts i referències
-> als passatges dels apunts.
+> `/ruta/volta-apunts`, en català. Conserva els originals, relaciona
+> els conceptes i prepara rutes d’estudi per matèria amb referències als
+> passatges dels apunts. Connecta assignatures només quan les fonts ho justifiquin.
 
 Obre la carpeta de la volta a Obsidian: contindrà `raw/` i `wiki/`.
 El punt d'entrada és `wiki/index.md`. Obrir només `wiki/` deixa fora les fonts
@@ -55,8 +55,10 @@ les comprovacions automàtiques. [Detall dels modes](skills/farcell/references/t
 
 ## Exemples opcionals
 
-[Guia de la demostració](examples/README.md): apunts didàctics de matemàtiques: funcions, derivades, integrals i exercicis.
-Inclou fitxes, conceptes, una ruta d’estudi i preguntes de repàs. El context
+[Guia de la demostració](examples/README.md): apunts didàctics de matemàtiques, física
+i literatura. Inclou fitxes, conceptes, rutes per matèria, exercicis i una
+connexió justificada entre càlcul i moviment. Una [guia de lectura i visualització](examples/demo/wiki/guia.md)
+explica què representa cada part i com configurar colors al graf. El context
 d’estudiant és fictici; els càlculs estan desenvolupats i es poden comprovar.
 
 Obre **`examples/demo/`** com a volta a Obsidian i entra a `wiki/index.md`.

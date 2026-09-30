@@ -1,7 +1,7 @@
 version: 1
-name: "Demostració Farcell"
+name: "Volta d’apunts — demostració Farcell"
 profile: "learning"
-purpose: "Explorar una volta demostrativa amb fonts i relacions traçables"
+purpose: "Organitzar apunts de diverses matèries i connectar-los quan hi hagi suport"
 language: "ca"
 tooling: "manual"
 source_policy: "provided-only"

@@ -4,7 +4,7 @@ type: "source"
 status: "draft"
 created: "2026-09-30"
 updated: "2026-09-30"
-tags: ["demostracio"]
+tags: ["demostracio", "materia/matematiques"]
 sources: ["raw/derivades.md"]
 source_notes: []
 authors: ["Estudiant fictici"]

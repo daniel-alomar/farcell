@@ -4,7 +4,7 @@ type: "procedure"
 status: "draft"
 created: "2026-09-30"
 updated: "2026-09-30"
-tags: ["demostracio"]
+tags: ["demostracio", "materia/matematiques"]
 sources: ["raw/exercicis.md"]
 source_notes: ["wiki/fonts/exercicis"]
 ---

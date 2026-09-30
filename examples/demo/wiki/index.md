@@ -1,16 +1,16 @@
-# Matemàtiques: del canvi a l’acumulació
+# Volta d’apunts: matemàtiques, física i literatura
 
-**VOLTA DE DEMOSTRACIÓ.** Context d’estudiant fictici; contingut didàctic creat.
-Obre `examples/demo/` com a volta. No es requereix Python per navegar-la.
+**DEMOSTRACIÓ DIDÀCTICA.** Estudiant fictici; apunts creats per al projecte.
+Sis documents d'entrada, amb notes i rutes per a tres matèries. Totes les
+notes generades són esborranys.
 
-Comença pel [[wiki/mapes/ruta-estudi|mapa d'estudi]]. Els conceptes principals
-són [[wiki/conceptes/funcio|funció]], [[wiki/conceptes/derivada|derivada]] i
-[[wiki/conceptes/integral|integral]]. Pots practicar amb
-[[wiki/exercicis/solucions|tres exercicis]], llegir la
-[[wiki/sintesis/canvi-i-acumulacio|síntesi]] i respondre la
-[[wiki/preguntes/error-derivada|pregunta de repàs]].
+Comença pel [[wiki/mapes/materies|mapa de matèries]]. Pots explorar:
 
-Les fitxes remeten als apunts originals: [[wiki/fonts/funcions|funcions]],
-[[wiki/fonts/derivades|derivades]], [[wiki/fonts/integrals|integrals]] i
-[[wiki/fonts/exercicis|exercicis]]. Consulta [[wiki/registre|l'abast de lectura]]
-i [[wiki/pendents|els pendents]]. Totes les notes són esborranys.
+- [[wiki/mapes/ruta-estudi|Matemàtiques]]: funcions, derivades, integrals i exercicis.
+- [[wiki/conceptes/velocitat|Física]]: canvi de posició i acumulació.
+- [[wiki/conceptes/narrador|Literatura]]: veu narrativa i interpretació d'un fragment.
+- [[wiki/sintesis/matematiques-i-fisica|Connexió entre càlcul i moviment]].
+
+[[wiki/guia|Què conté l’exemple i com es visualitza]] explica originals, fitxes,
+metadades, relacions i colors. [[wiki/registre|Registre de lectura]] i
+[[wiki/pendents|pendents]] delimiten què s'ha treballat.

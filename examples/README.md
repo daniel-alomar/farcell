@@ -1,37 +1,45 @@
-# Farcell: apunts d'un estudiant de matemàtiques
+# Farcell: una volta d’apunts de diverses matèries
 
-Demostració creada per al projecte. L'estudiant i els seus apunts són ficticis;
-els conceptes matemàtics i les solucions es poden comprovar amb els càlculs.
-No és una reproducció d'un curs ni una bibliografia acadèmica.
+Demostració amb matemàtiques, física i literatura. L'estudiant i els apunts
+són ficticis; les explicacions i els càlculs són material didàctic creat per
+al projecte. El microrelat és original, sense atribució a un autor publicat.
+
+## Què hi ha i per què
+
+Sis documents d'entrada: quatre de matemàtiques, un de física i un de literatura.
+Cada original té una fitxa; les idees reutilitzables tenen notes de concepte.
+Hi ha exercicis, preguntes, dues síntesis i dos mapes de navegació.
+
+Les matemàtiques i la física comparteixen una connexió sustentada pels apunts:
+la derivada com a eina per estudiar velocitat i la integral com a acumulació.
+La literatura conserva una ruta pròpia. La volta mostra que es poden reunir
+matèries sense forçar una relació entre tots els seus continguts.
 
 ## Explorar el resultat
 
-Obre **`demo/`** com a volta a Obsidian i entra a `wiki/index.md`. Mantén `raw/`
-i `wiki/` dins la mateixa volta perquè funcionin els enllaços als originals.
-
-Hi ha quatre documents d'entrada, quatre fitxes, tres conceptes, una nota
-amb solucions, un mapa d'estudi, una síntesi i una pregunta de repàs. Comença
-pel mapa; segueix funció → derivada → integral i torna als apunts amb els
-localitzadors. La síntesi mostra com relacionar canvi local i acumulació.
-La pregunta conserva un error freqüent per orientar el repàs.
+Obre **`demo/`** com a volta a Obsidian i entra a `wiki/index.md`.
+La [guia de lectura i visualització](demo/wiki/guia.md) descriu les peces, les
+metadades i la manera d'explorar-les. Inclou una llegenda de colors suggerida.
+No obris només `wiki/`: els enllaços necessiten els originals de `raw/`.
 
 ## Provar la skill
 
 Copia només `demo/raw/` a una carpeta temporal i demana:
 
-> Utilitza $farcell amb aquests apunts. Crea una volta nova en català amb
-> perfil d'aprenentatge. Connecta definicions i exercicis, explica les
-> relacions i conserva els errors com a preguntes de repàs. Treballa sense
-> Python i registra què has llegit i comprovat.
+> Utilitza $farcell amb aquests apunts de diverses matèries. Crea una
+> volta-apunts en català amb perfil d'aprenentatge, fitxes i rutes per
+> assignatura. Connecta conceptes entre matèries quan hi hagi suport i explica
+> la relació. Treballa sense Python i registra què has llegit i comprovat.
 
-La volta inclosa mostra un possible resultat, no un text que l'agent hagi
-de reproduir. Pots afegir un exercici a la còpia temporal i comprovar si
-s'actualitzen la fitxa, les solucions i el mapa sense reescriure notes alienes.
-No utilitzis l'exemple com a font de la teva biblioteca personal.
+La sortida inclosa és una organització possible, no una plantilla obligatòria.
+Pots afegir un altre fragment de literatura a la còpia temporal i comprovar
+si amplia aquella branca sense reescriure els apunts de física o matemàtiques.
+Una volta dedicada a una única assignatura també és una opció vàlida si aquest
+és l'objectiu de l'usuari; no és el que s'assumeix a la demostració general.
 
 ## Retirar-lo
 
-Pots eliminar `examples/`. No s'inclou dins la skill instal·lada i no es
-carrega automàticament. Per compartir un paquet sense demostració, utilitza
-`python3 scripts/distribute.py --without-examples` des de l'arrel del projecte.
-Aquest comandament és opcional: també pots compartir només `skills/farcell/`.
+Elimina `examples/` quan ja no el necessitis. No forma part de la skill
+instal·lada ni es carrega automàticament. Per compartir un paquet sense exemples,
+usa `python3 scripts/distribute.py --without-examples`, o copia només
+`skills/farcell/`. No barregis la demostració amb el corpus de la teva volta real.
