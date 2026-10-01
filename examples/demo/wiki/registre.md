@@ -15,3 +15,8 @@ síntesi de matemàtiques i física. El mapa de matèries és només navegació.
 Etiquetes de matèria a les notes temàtiques; la síntesi compartida té etiqueta
 pròpia. La guia descriu la visualització suggerida. Posteriorment s’ha afegit
 un perfil de colors opcional només a la demostració, sense plugins.
+
+2026-10-01. Llegits completament relat-continuacio.md i mesures-moviment.md.
+Afegides fitxes, síntesi de lectura revisada i exercici comparatiu. Actualitzades
+la pregunta de la carta i la nota del narrador; conservada la resposta inicial
+amb el seu abast. El material nou és didàctic i fictici. Mode manual.

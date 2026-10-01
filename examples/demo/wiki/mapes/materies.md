@@ -22,3 +22,6 @@ estiguin relacionats entre si.
 
 La literatura té la seva ruta pròpia. Compartir volta no exigeix tenir
 connexions conceptuals amb totes les altres assignatures.
+
+Per practicar l'ús de la volta: [[wiki/exercicis/model-i-dades|comparar model i dades]]
+i [[wiki/sintesis/lectura-revisada|revisar una lectura amb informació nova]].

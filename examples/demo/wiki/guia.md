@@ -18,11 +18,11 @@ representa cada peça i què es pot veure a Obsidian. No és una font dels apunt
 
 | Peça | Què conté | Per què serveix |
 |---|---|---|
-| `raw/` | Sis documents didàctics d'entrada | Tornar al passatge que sosté una afirmació |
-| `wiki/fonts/` | Sis fitxes de procedència i abast | Saber què s'ha llegit i de quin document prové |
+| `raw/` | Vuit documents didàctics d'entrada | Tornar al passatge que sosté una afirmació |
+| `wiki/fonts/` | Vuit fitxes de procedència i abast | Saber què s'ha llegit i de quin document prové |
 | `wiki/conceptes/` | Funció, derivada, integral, velocitat i narrador | Reutilitzar idees sense duplicar tots els apunts |
-| `wiki/exercicis/` | Càlculs resolts de matemàtiques | Practicar i comprovar els resultats |
-| `wiki/sintesis/` | Canvi/acumulació i connexió càlcul/moviment | Llegir relacions explicades amb evidència |
+| `wiki/exercicis/` | Càlculs resolts i comparació entre model i dades | Practicar i comprovar els resultats |
+| `wiki/sintesis/` | Canvi/acumulació, càlcul/moviment i lectura revisada | Llegir relacions explicades amb evidència |
 | `wiki/preguntes/` | Error de derivació i autoria de la carta | Conservar dubtes i límits del material |
 | `wiki/mapes/` | Ruta matemàtica i mapa de matèries | Triar per on començar |
 | `wiki/registre.md`, `wiki/pendents.md` | Lectures i límits | Distingir treball fet i possibles ampliacions |
@@ -80,3 +80,7 @@ configuració del graf. No copiïs el perfil sobre les preferències d'una volta
 personal sense revisar-lo. El graf local pot tenir opcions pròpies.
 El format del perfil s'ha comprovat com a JSON; la visualització no s'ha
 validat en una sessió gràfica d'Obsidian en aquesta revisió.
+
+L’ampliació incorpora una continuació literària i una pràctica amb dades
+sintètiques: [[wiki/sintesis/lectura-revisada|lectura revisada]] i
+[[wiki/exercicis/model-i-dades|model i dades]].

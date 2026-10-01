@@ -6,9 +6,10 @@ al projecte. El microrelat és original, sense atribució a un autor publicat.
 
 ## Què hi ha i per què
 
-Sis documents d'entrada: quatre de matemàtiques, un de física i un de literatura.
+Vuit documents d'entrada: quatre de matemàtiques, dos de física i dos de literatura.
 Cada original té una fitxa; les idees reutilitzables tenen notes de concepte.
-Hi ha exercicis, preguntes, dues síntesis i dos mapes de navegació.
+Hi ha exercicis, preguntes, síntesis i mapes de navegació, amb una comparació
+entre model i dades i una resposta que evoluciona amb informació nova.
 
 Les matemàtiques i la física comparteixen una connexió sustentada pels apunts:
 la derivada com a eina per estudiar velocitat i la integral com a acumulació.
@@ -47,3 +48,5 @@ usa `python3 scripts/distribute.py --without-examples`, o copia només
 La carpeta oculta `demo/.obsidian/` inclou únicament el perfil de graf de
 la demostració. Conserva-la quan copiïs l'exemple si vols veure els colors
 preparats. Aquesta ajuda visual és opcional i no forma part de la skill.
+
+[Recorregut pràctic amb peticions i resultats esperats](PASSEIG.md).
