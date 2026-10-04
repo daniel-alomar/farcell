@@ -1,5 +1,7 @@
 # Prova Farcell amb una tasca realista
 
+[Català](PASSEIG.md) · [English](WALKTHROUGH.en.md)
+
 La carpeta inclosa mostra un resultat preparat, no un registre d'una execució
 autònoma certificada. Aquest recorregut permet comprovar si la teva IA arriba
 a conclusions sustentades i manté la volta amb cura. Utilitza una còpia temporal.

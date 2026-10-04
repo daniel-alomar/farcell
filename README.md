@@ -1,205 +1,199 @@
 # Farcell
 
-Farcell ajuda a convertir documents, apunts i informació dispersa en una
-volta d'Obsidian que es pugui explorar i consultar. L'agent crea fitxes de
-les fonts, identifica conceptes compartits i explica les connexions entre
-ells, amb enllaços que permeten tornar al passatge original. Serveix per
-estudiar, documentar un projecte o comprendre un arxiu personal; cada volta
-pot tenir el seu objectiu, idioma i manera d'organitzar el coneixement.
+[English](README.md) · [Català](README.ca.md)
 
-Un **farcell** és un embolcall de roba que aplega allò que ens enduem o anem
-recollint pel camí. El nom evoca documents de procedències diverses que
-acaben formant un recull útil. Aquí, reunir-los és el primer pas: les notes
-connectades ajuden a entendre què contenen, què tenen en comú i quines
-preguntes deixen obertes.
+Farcell turns documents, notes and scattered information into an Obsidian
+vault you can explore and query. The agent creates source notes, identifies
+shared concepts and explains their connections, with links back to the original
+passages. Use it to study, document a project or understand a personal archive;
+each vault can have its own purpose, language and organization.
 
-[Repositori Farcell](https://github.com/daniel-alomar/farcell).
+A **farcell** is a cloth bundle for carrying what we take with us or collect
+along the way. The name evokes documents from different places becoming a
+useful collection. Bringing them together is the first step: connected notes
+help explain their content, what they share and which questions remain open.
 
-## Com està plantejat
+[Farcell repository](https://github.com/daniel-alomar/farcell).
 
-Farcell conté una skill que utilitza l'agent d'IA amb què treballes.
-En l'ús habitual, un únic agent llegeix les fonts, crea notes, les connecta
-i revisa el resultat seguint passos. No cal executar dos agents.
+## How the project works
 
-- `agents/` conté guies de rols opcionals: coordinador i revisor.
-- `skills/farcell/agents/openai.yaml` conté metadades de presentació per a Codex;
-  no és un altre agent.
-- `AGENTS.md` conté instruccions contextuals per treballar al projecte.
+Farcell provides one skill for the AI agent you work with. In normal use, one agent
+reads sources, creates and connects notes, and reviews the result in stages.
+You do not need to run two agents.
 
-[Funcionament, operacions i procés pas a pas](docs/ca/funcionament.md).
+- `agents/` contains optional coordinator and reviewer role guides.
+- `skills/farcell/agents/openai.yaml` contains Codex display metadata, not another agent.
+- `AGENTS.md` provides contextual instructions for working on the project.
 
-## Començar
+[Operations and step-by-step workflow](docs/en/workflow.md).
 
-Copia `skills/farcell/` al directori de skills del teu agent, o demana-li que
-llegeixi `skills/farcell/SKILL.md`. Necessites un agent capaç de llegir les
-fonts i escriure fitxers. En Codex, la skill s'invoca com a `$farcell`; la lectura i
-síntesi les fa l'agent. Obsidian permet navegar i editar el resultat.
+## Getting started
 
-Exemple de petició (substitueix les rutes per les teves):
+Copy `skills/farcell/` into your agent's skills directory, or ask it to read
+`skills/farcell/SKILL.md`. The agent needs to read your sources and write files.
+In Codex, invoke `$farcell`; the agent performs reading and synthesis.
+Use Obsidian to browse and edit the result.
 
-> Utilitza $farcell. Organitza els apunts de `/ruta/apunts` en una volta a
-> `/ruta/volta-apunts`. Conserva els originals, relaciona
-> els conceptes i prepara rutes d’estudi per matèria amb referències als
-> passatges dels apunts. Connecta assignatures només quan les fonts ho justifiquin.
+Example request (replace the paths with your own):
 
-Obre la carpeta de la volta a Obsidian: contindrà `raw/` i `wiki/`.
-El punt d'entrada és `wiki/index.md`. Obrir només `wiki/` deixa fora les fonts
-que necessiten els enllaços de la demostració. La skill treballa sota demanda;
-una execució periòdica requereix acordar el calendari i les carpetes.
+> Use $farcell. Organize the notes in `/path/notes` into a vault at
+> `/path/study-vault`. Preserve originals, connect concepts and prepare study
+> routes by subject with references to passages in the notes. Connect subjects
+> only when supported by the sources.
 
-## Ús amb altres agents d'IA
+Open the whole vault folder in Obsidian: it contains `raw/` and `wiki/`.
+Start at `wiki/index.md`. Opening only `wiki/` excludes the sources needed
+by the demonstration's links. The skill runs on request; recurring work
+requires an agreed schedule and folders.
 
-El nucli és portable: instruccions Markdown, referències i scripts locals,
-sense crides a una API d'OpenAI ni dependència del seu SDK. Requereix un agent
-amb accés de lectura i escriptura a les fonts i a la volta; un xat sense
-accés als fitxers no pot mantenir directament aquesta carpeta.
+## Using other AI agents
 
-Claude Code admet el mateix format de skill. Copia tota la carpeta
-`skills/farcell/` a `~/.claude/skills/farcell/` i invoca `/farcell`.
-La sintaxi `$farcell` dels exemples correspon a Codex. Consulta la
-[documentació de Claude Code](https://code.claude.com/docs/en/skills).
+The core is portable: Markdown instructions, references and local scripts,
+with no OpenAI API calls or SDK dependency. It requires an agent with read
+and write access to sources and the vault. A chat without file access cannot
+maintain the folder directly.
 
-`agents/openai.yaml`, dins de la skill, és metadada específica de Codex i
-no forma part del procediment necessari per a Claude. Els rols de `agents/`
-continuen sent guies opcionals, no subagents instal·lats de Claude.
-Per carregar les instruccions contextuals del projecte a Claude Code, demana
-que llegeixi `AGENTS.md` o referencia'l des del `CLAUDE.md` existent, sense
-substituir-lo. [Context de projecte a Claude Code](https://code.claude.com/docs/en/memory).
+Claude Code supports the same skill format. Copy the whole `skills/farcell/`
+folder to `~/.claude/skills/farcell/` and invoke `/farcell`. The `$farcell` syntax
+in the examples is for Codex. See the [Claude Code documentation](https://code.claude.com/docs/en/skills).
 
-La compatibilitat de format està documentada; encara no s'ha fet una prova
-completa d'aquests projectes amb Claude Code. Altres entorns de Claude o
-d'altres proveïdors poden requerir una instal·lació i permisos diferents.
+The skill's `agents/openai.yaml` is Codex-specific metadata and is not part
+of the procedure Claude needs. The project-level roles remain optional guides,
+not installed Claude subagents. To load project context in Claude Code, ask
+it to read `AGENTS.md` or reference it from your existing `CLAUDE.md`, without
+replacing that file. [Project context in Claude Code](https://code.claude.com/docs/en/memory).
 
-## Auxiliar amb Python
+Format compatibility is documented; these projects have not yet been tested
+end to end with Claude Code. Other Claude environments and other providers
+may require different installation steps and permissions.
 
-**Python és opcional.** Pots crear, consultar i mantenir la volta amb l'agent
-i Obsidian, sempre que l'agent disposi de les eines necessàries per llegir
-els formats aportats. Per prescindir de Python, afegeix a la petició:
+## Python helper
 
-> Treballa sense Python i desa `tooling: manual` a `knowledge.yaml`.
+**Python is optional.** You can create, query and maintain the vault with the
+agent and Obsidian, provided the agent can read the supplied formats.
+To work without Python, add this to your request:
 
-La configuració la interpreta l'agent. En aquest mode comprova fonts i
-enllaços amb els lectors disponibles i documenta les lectures al registre.
-Es conserven les fitxes, les cites i les connexions. Es perd la detecció
-automàtica per empremtes de duplicats, modificacions de notes i canvis de
-fonts durant el procés; el manteniment pot requerir més relectures. Si no
-pot llegir un format sense Python, el deixa pendent i explica el motiu.
+> Work without Python and save `tooling: manual` in `knowledge.yaml`.
 
-**Qui executa Python?** L'agent, si disposa d'una eina per executar
-comandaments i accés als fitxers. L'usuari demana la tasca en llenguatge natural;
-no ha de copiar comandaments durant l'ús habitual. Tenir Python instal·lat
-no és suficient si l'entorn de l'agent no permet executar-lo. Els comandaments
-de més avall són documentació per al manteniment i la diagnosi.
+The agent interprets this setting. It checks sources and links with available
+readers and records what it read. Source notes, citations and connections are
+preserved. You lose automatic hash-based detection of duplicates, edited notes
+and sources changed during processing; maintenance may require more rereading.
+If a format cannot be read without Python, the agent leaves it pending and
+explains why.
 
-| Mode | Avantatges | Costos i limitacions |
+**Who runs Python?** The agent, if it has command execution and file access.
+You request work in natural language; you do not need to copy commands in
+normal use. Installing Python is insufficient if the agent cannot run it.
+The commands below document maintenance and diagnostics.
+
+| Mode | Benefits | Costs and limitations |
 |---|---|---|
-| Amb Python | Comprovacions repetibles d'enllaços; detecció per empremtes de canvis i duplicats; protecció davant canvis de la font entre lectura i acceptació | Requereix Python 3.10+, `fcntl` i execució de comandaments; llegir fitxers per calcular empremtes consumeix temps en corpus grans; cal mantenir l'estat local |
-| Sense Python | Menys requisits d'execució; útil en entorns amb lectors i edició de fitxers però sense intèrpret | Més relectura i revisió per l'agent; menys detecció automàtica de canvis i duplicats; alguns formats poden quedar pendents |
+| With Python | Repeatable link checks; hash-based change and duplicate detection; protection against sources changing between reading and acceptance | Requires Python 3.10+, `fcntl` and command execution; hashing large corpora takes time; local state must be maintained |
+| Without Python | Fewer execution requirements; works with file readers and editors without an interpreter | More rereading and review by the agent; less automatic change and duplicate detection; some formats may remain pending |
 
-En tots dos modes, l'agent fa la síntesi i revisa les evidències. Python
-no valida la veritat dels continguts ni substitueix la revisió humana.
-Recomanació: `auto` per a l'ús habitual; `manual` quan no vulguis executar
-Python o l'entorn no ho permeti. «Manual» vol dir que l'agent fa les
-comprovacions amb les altres eines, no que l'usuari hagi de fer-les totes.
+In both modes, the agent synthesizes and reviews evidence. Python does not
+validate the truth of the content or replace human review. Use `auto` for
+normal operation and `manual` when you do not want Python or the environment
+cannot run it. “Manual” means the agent uses other tools, not that you must
+perform all checks yourself.
 
-Per defecte `tooling: auto` utilitza el comprovador quan és disponible; si
-no ho és, l’agent explica el motiu i et proposa preparar l’entorn o
-continuar sense Python. Espera la teva tria abans de canviar el mode. `tooling: python` demana explícitament
-les comprovacions automàtiques. [Detall dels modes](skills/farcell/references/tooling.md).
+By default, `tooling: auto` uses the helper when available. Otherwise, the
+agent explains the cause and offers environment setup or work without Python.
+It waits for your choice before changing mode. `tooling: python` explicitly
+requests automatic checks. [Operational mode reference (Catalan)](skills/farcell/references/tooling.md).
 
-### Si Python no està disponible
+### If Python is unavailable
 
-L'agent t'explica el problema amb paraules entenedores i et proposa:
+The agent should explain the problem in plain language and offer:
 
-1. **Rebre ajuda per instal·lar o preparar Python**, amb instruccions per al
-   teu sistema i l'entorn de l'agent. La instal·lació no es fa automàticament.
-2. **Continuar sense Python**, conservant notes, cites, connexions i consultes,
-   amb menys detecció automàtica de canvis i duplicats i més revisió per l'agent.
+1. **Help installing or preparing Python**, with instructions for your system
+   and the agent's environment. It does not install software automatically.
+2. **Continue without Python**, preserving notes, citations, connections and
+   queries, with less automatic change and duplicate detection and more review.
 
-No canvia de mode sense la teva decisió. Si ja has triat el mode manual,
-no repeteix aquesta pregunta en cada execució. També distingeix entre Python
-absent i un agent que no pot executar comandaments: instal·lar-lo al teu
-ordinador no resol necessàriament una limitació de l'entorn remot.
+It must wait for your decision, and must not ask again on every run after
+you choose manual mode. It distinguishes a missing interpreter from an agent
+that cannot execute commands: installing Python on your computer does not
+necessarily solve a restriction in a remote environment.
 
-### Requisits i llibreries
+### Requirements and libraries
 
-No cal instal·lar paquets amb `pip`: les utilitats del projecte utilitzen
-exclusivament la biblioteca estàndard de **Python 3.10 o superior**.
+No `pip` packages are required: the utilities use only the **Python 3.10+
+standard library**.
 
-| Component | Mòduls utilitzats | Requisit particular |
+| Component | Modules used | Specific requirement |
 |---|---|---|
-| Inventari, enllaços i acceptació | `argparse`, `collections`, `datetime`, `fcntl`, `hashlib`, `json`, `os`, `pathlib`, `re`, `tempfile` | `fcntl` és propi d'entorns Unix: Linux/macOS; el comprovador no funciona amb Python natiu de Windows |
-| Empaquetament | `argparse`, `json`, `pathlib`, `zipfile` | La compressió ZIP necessita `zlib`, habitualment inclòs amb Python |
-| Proves | `unittest`, `importlib.util` i mòduls estàndard de fitxers/empremtes | Importen el comprovador i, per tant, també requereixen `fcntl` |
+| Inventory, links and acceptance | `argparse`, `collections`, `datetime`, `fcntl`, `hashlib`, `json`, `os`, `pathlib`, `re`, `tempfile` | `fcntl` requires Unix, such as Linux/macOS; the helper does not run under native Windows Python |
+| Packaging | `argparse`, `json`, `pathlib`, `zipfile` | ZIP compression needs `zlib`, normally included with Python |
+| Tests | `unittest`, `importlib.util` and standard file/hash modules | Import the helper and therefore also require `fcntl` |
 
-En Windows es pot utilitzar un entorn Linux com WSL amb Python, o triar
-el mode manual. `fcntl` no és un paquet que s'hagi d'instal·lar amb `pip`.
-Els lectors de PDF/DOCX, l'OCR i la transcripció no estan inclosos en aquestes
-utilitats: poden requerir altres eines segons l'entorn de l'agent. No hi ha
-una llibreria d'IA obligatòria dins dels scripts del projecte.
+On Windows, use a Linux environment such as WSL with Python, or manual mode.
+`fcntl` is not a package to install with `pip`. PDF/DOCX readers, OCR and
+transcription are not included in these utilities and may need other tools
+in the agent's environment. The scripts require no AI library.
 
-## Exemples opcionals
+## Optional examples
 
-[Guia de la demostració](examples/README.md): apunts didàctics de matemàtiques, física
-i literatura. Inclou fitxes, conceptes, rutes per matèria, exercicis i una
-connexió justificada entre càlcul i moviment. Una [guia de lectura i visualització](examples/demo/wiki/guia.md)
-explica què representa cada part i proposa una visualització opcional del graf. El context
-d’estudiant és fictici; els càlculs estan desenvolupats i es poden comprovar.
+[Demonstration guide](examples/README.en.md): teaching notes in mathematics,
+physics and literature. Includes source notes, concepts, subject routes,
+exercises and a justified connection between calculus and motion. The student
+scenario is fictional; calculations are worked out and can be checked.
 
-Obre **`examples/demo/`** com a volta a Obsidian i entra a `wiki/index.md`.
-Els exemples estan identificats, no es carreguen automàticament i no formen
-part de la skill instal·lada. Pots eliminar `examples/` sense afectar l'ús;
-la prova de la demostració s'omet si s'ha eliminat. No els barregis amb les
-fonts de la teva volta real. La demostració és una possibilitat d'organització,
-no una plantilla obligatòria.
+Open **`examples/demo/`** as a vault in Obsidian, then open `wiki/index.md`.
+The examples are labelled, are not loaded automatically and are not part of
+the installed skill. You can remove `examples/` without affecting operation;
+the demonstration test is skipped if it is absent. Keep examples separate
+from your real sources. The demonstration is one possible organization,
+not a mandatory template.
 
-El [recorregut pràctic](examples/PASSEIG.md) inclou peticions, respostes
-esperades i una incorporació en dues etapes per veure com evoluciona la volta.
+The [practical walkthrough](examples/WALKTHROUGH.en.md) includes prompts,
+expected responses and a two-stage addition showing how the vault develops.
 
-## Recomanació opcional: graf de colors
+## Optional recommendation: graph colours
 
-Els colors són una ajuda de navegació d'Obsidian. La skill pot treballar sense
-ells i no configura automàticament el graf de les voltes personals.
-La demostració inclou un perfil de colors preparat; la seva guia explica
-com obrir el graf, interpretar la llegenda i canviar-la o retirar-la.
+Colours are an Obsidian navigation aid. The skill works without them and does
+not automatically configure personal vault graphs. The demo includes a colour
+profile; its [reading and visualization guide](docs/en/demo-guide.md) explains
+how to open the graph, interpret the legend and change or remove it.
 
-## Carpetes
+## Folders
 
-- `skills/farcell/`: instruccions, referències i comprovador opcional.
-- `agents/`: guies de rols opcionals, no agents executables.
-- `docs/ca/`: guies de funcionament del projecte.
-- `context/`: objectiu i decisions del producte.
-- `memory/`: resums locals opcionals, exclosos de la distribució.
-- `examples/`: demostració eliminable.
-- `scripts/` i `tests/`: eines de distribució i proves del projecte.
+- `skills/farcell/`: instructions, references and optional checker.
+- `agents/`: optional role guides, not executable agents.
+- `docs/ca/` and `docs/en/`: project guides.
+- `context/`: product purpose and decisions.
+- `memory/`: optional local summaries, excluded from distribution.
+- `examples/`: removable demonstration.
+- `scripts/` and `tests/`: distribution tools and project tests.
 
-## Comprovacions auxiliars de la volta
+## Auxiliary vault checks
 
-L'eina `skills/farcell/scripts/vault_state.py` requereix Python 3.10 o superior
-en Linux/macOS (`fcntl`) i només biblioteca estàndard. Aquests comandaments
-s'executen des de `skills/farcell/`, habitualment per l'agent:
+`skills/farcell/scripts/vault_state.py` requires Python 3.10+ on Linux/macOS
+(`fcntl`) and only the standard library. Run these commands from `skills/farcell/`,
+usually through the agent:
 
-| Funció | Objectiu | Efecte |
+| Function | Purpose | Effect |
 |---|---|---|
-| `scan` | Comparar fonts i notes amb l'estat desat; assenyalar canvis, absències i duplicats | Només lectura |
-| `links` | Detectar destins de wikilinks inexistents o ambigus | Només lectura |
-| `accept` | Registrar la font revisada i les empremtes de les notes dependents | Escriu `.wiki/state.json` |
+| `scan` | Compare sources and notes against saved state; report changes, missing files and duplicates | Read-only |
+| `links` | Find missing or ambiguous wikilink destinations | Read-only |
+| `accept` | Record a reviewed source and hashes of dependent notes | Writes `.wiki/state.json` |
 
 ```sh
-python3 scripts/vault_state.py scan /ruta/volta
-python3 scripts/vault_state.py links /ruta/volta
+python3 scripts/vault_state.py scan /path/to/vault
+python3 scripts/vault_state.py links /path/to/vault
 ```
 
-La sintaxi d'`accept` i els criteris previs són a [l'esquema](skills/farcell/references/schema.md).
-L'eina no resumeix documents, no valida cites ni coneixement i no comprova
-àncores, enllaços Markdown o metadades. La revisió de contingut continua
-sent necessària. L'OCR i la transcripció depenen dels lectors disponibles.
+See the [schema (Catalan)](skills/farcell/references/schema.md) for `accept` syntax
+and preconditions. The tool does not summarize documents, validate citations
+or knowledge, or check anchors, Markdown links or metadata. Content review
+is still necessary. OCR and transcription depend on available readers.
 
-## Provar el projecte i preparar-ne una distribució
+## Testing and preparing a distribution
 
-Aquest apartat és per a qui modifica o comparteix el projecte. **No cal
-executar-lo per utilitzar la skill ni per obrir una volta a Obsidian.**
-Amb Python, des de l'arrel del projecte:
+This section is for people modifying or sharing the project. **You do not
+need to run these commands to use the skill or open a vault in Obsidian.**
+With Python, from the project root:
 
 ```sh
 python3 -B -m unittest discover -s tests
@@ -207,15 +201,13 @@ python3 scripts/distribute.py
 python3 scripts/distribute.py --without-examples
 ```
 
-El primer comandament comprova les utilitats, la protecció d'edicions humanes
-i els enllaços de la demostració. El segon genera un ZIP i un manifest de
-fitxers distribuïbles a `dist/`. El tercer prepara una versió sense exemples;
-**no és una opció per desactivar Python**. Sense Python, pots copiar la carpeta
-`skills/farcell/` directament i compartir els fitxers seleccionats sense generar
-el paquet automàtic. Memòria local, voltes personals, converses i secrets
-queden fora de la distribució automàtica. La llicència continua pendent de decisió.
+The first command checks the utilities, protection of human edits and demo
+links. The second creates a ZIP and distributable file manifest in `dist/`.
+The third prepares a version without examples; **it does not disable Python**.
+Without Python, copy `skills/farcell/` directly and share selected files without
+automated packaging. Local memory, personal vaults, conversations and secrets
+are excluded from automated distribution. The licence remains undecided.
 
-## Projecte relacionat
+## Related project
 
-[Garbell](https://github.com/daniel-alomar/garbell) s’especialitza en lectura crítica, evidència
-i síntesi bibliogràfica per a recerca i doctorat.
+[Garbell](https://github.com/daniel-alomar/garbell) specializes in critical reading, evidence and bibliographic synthesis for research and PhD work.

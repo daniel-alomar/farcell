@@ -84,3 +84,5 @@ validat en una sessió gràfica d'Obsidian en aquesta revisió.
 L’ampliació incorpora una continuació literària i una pràctica amb dades
 sintètiques: [[wiki/sintesis/lectura-revisada|lectura revisada]] i
 [[wiki/exercicis/model-i-dades|model i dades]].
+
+[English reading guide](../../../docs/en/demo-guide.md) (documentació del projecte, fora de la volta).

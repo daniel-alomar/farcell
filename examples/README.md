@@ -1,5 +1,7 @@
 # Farcell: una volta d’apunts de diverses matèries
 
+[Català](README.md) · [English](README.en.md)
+
 Demostració amb matemàtiques, física i literatura. L'estudiant i els apunts
 són ficticis; les explicacions i els càlculs són material didàctic creat per
 al projecte. El microrelat és original, sense atribució a un autor publicat.
